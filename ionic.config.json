@@ -1,0 +1,7 @@
+{
+  "name": "project19-citizenapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
