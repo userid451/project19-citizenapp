@@ -1,7 +1,8 @@
 {
   "name": "project19-citizenapp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

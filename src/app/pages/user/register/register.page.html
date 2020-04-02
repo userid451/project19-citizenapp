@@ -1,0 +1,29 @@
+<app-header headerTitle="Register"></app-header>
+
+<ion-content fullscreen>
+  <div class="ion-padding">
+    <form (ngSubmit)="register()">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input [(ngModel)]="user.name" name="name" inputmode="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Phone</ion-label>
+          <ion-input [(ngModel)]="user.phoneNumber" name="phoneNumber" inputmode="tel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="user.email" name="email" inputmode="email"></ion-input>
+        </ion-item>
+
+      </ion-list>
+
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin" style="--border-radius: 12px">COMPLETE REGISTRATION</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

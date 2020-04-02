@@ -1,0 +1,19 @@
+.v-center-body {
+  position: relative;
+  width: 90%;
+  top: 20%;
+  margin: 0 auto;
+}
+.v-center-next {
+  position: relative;
+  width: 90%;
+  top: 70%;
+  margin: 0 auto;
+}
+.transparent-buttons {
+  --border-color: black;
+  --border-radius: 12px;
+  --background: transparent;
+  --border-radius: 0;
+}
+
