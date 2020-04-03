@@ -1,0 +1,46 @@
+ion-slides {
+  height: 100%;
+}
+
+.swiper-slide {
+  display: block;
+}
+b {
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+  color: var(--ion-color-step-600, #60646b);
+  text-align: left;
+}
+
+p b {
+  color: var(--ion-text-color, #000000);
+}
+
+h1 {
+  color: var(--ion-color-primary, #c80f2e);
+}
+h5 {
+  color: var(--ion-color-step-600, #60646b);
+}
+
+ion-col {
+  border: 1px solid black;
+}
+ion-item {
+  padding: 7px;
+}
+ion-icon {
+  width: 60px;
+  height: 60px;
+}
+ion-icon .bigger {
+  width: 120px;
+  height: 120px;
+}
+.buttonbottom {
+  position: absolute;
+  top: 80%;
+}
