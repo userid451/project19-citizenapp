@@ -4,9 +4,9 @@ import { FormsModule } from "@angular/forms";
 
 import { IonicModule } from "@ionic/angular";
 
-import { OnboardingPageRoutingModule } from "./onboarding-routing.module";
+import { LandingPageRoutingModule } from "./landing-routing.module";
 
-import { OnboardingPage } from "./onboarding.page";
+import { LandingPage } from "./landing.page";
 import { HeaderModule } from "../component/header/header.module";
 
 @NgModule({
@@ -14,9 +14,9 @@ import { HeaderModule } from "../component/header/header.module";
     CommonModule,
     FormsModule,
     IonicModule,
-    OnboardingPageRoutingModule,
+    LandingPageRoutingModule,
     HeaderModule
   ],
-  declarations: [OnboardingPage]
+  declarations: [LandingPage]
 })
-export class OnboardingPageModule {}
+export class LandingPageModule {}
