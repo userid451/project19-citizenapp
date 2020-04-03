@@ -1,4 +1,6 @@
-import { NgModule } from '@angular/core';
+import {
+  NgModule,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -16,4 +18,5 @@ import {HeaderComponent} from './header.component';
   declarations: [HeaderComponent],
   exports: [HeaderComponent]
 })
-export class HeaderModule {}
+export class HeaderModule {
+}

@@ -14,6 +14,7 @@ import { AppComponent }     from './app.component';
 import {CommonModule}       from '@angular/common';
 import {FormsModule}        from '@angular/forms';
 import {IonicStorageModule} from '@ionic/storage';
+import {NgxQRCodeModule}    from 'ngx-qrcode2';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {IonicStorageModule} from '@ionic/storage';
     FormsModule,
     BrowserModule, IonicModule.forRoot(),
     AppRoutingModule,
+    NgxQRCodeModule,
     IonicStorageModule.forRoot()
   ],
   providers: [

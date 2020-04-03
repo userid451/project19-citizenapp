@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService}         from '../api/user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-  constructor() { }
+  user: any;
+  elementType: 'url' | 'canvas' | 'img';
+  qrValue: string;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getAuthenticatedUser().then((user: string) => {
+      if (user) {
+        this.user = JSON.parse(user);
+        this.qrValue = this.user.id;
+      }
+      else {
+        // go to log in page
+      }
+    });
   }
 
 }

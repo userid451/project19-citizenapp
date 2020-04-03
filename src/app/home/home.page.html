@@ -19,7 +19,12 @@
       <ion-col>
         <div>
           <ion-card>
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" />
+            <ngx-qrcode
+                    [qrc-element-type]="elementType"
+                    [qrc-value] = "qrValue"
+                    qrc-class = "aclass"
+                    qrc-errorCorrectionLevel = "L">
+            </ngx-qrcode>
             <ion-card-header>
               <ion-card-subtitle>Destination</ion-card-subtitle>
               <ion-card-title>Madison, WI</ion-card-title>
@@ -30,16 +35,6 @@
           </ion-card>
         </div>
       </ion-col>
-<!--      <ion-col>-->
-<!--        <div>-->
-<!--          2 of 3-->
-<!--        </div>-->
-<!--      </ion-col>-->
-<!--      <ion-col>-->
-<!--        <div>-->
-<!--          3 of 3-->
-<!--        </div>-->
-<!--      </ion-col>-->
     </ion-row>
   </ion-grid>
 </ion-content>

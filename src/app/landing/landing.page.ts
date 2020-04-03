@@ -13,7 +13,6 @@ export class LandingPage implements OnInit {
   ngOnInit() {
     this.userService.isStartupCompleted().then((data: any) => {
       if (!data) {
-        console.log(data, '0-----------------------------')
         this.router.navigate(['/onboarding'])
       }
       else {
