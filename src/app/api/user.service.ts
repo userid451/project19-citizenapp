@@ -10,6 +10,7 @@ export class UserService {
     userAuthPrefix: string = 'Auth';
     
     constructor(private storage: Storage) {
+        // this.storage.clear();
     }
     
     public saveUser(user: any): any {

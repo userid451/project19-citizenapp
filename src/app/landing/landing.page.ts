@@ -11,12 +11,21 @@ export class LandingPage implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
-    this.userService.getAuthenticatedUser().then((data: any) => {
-      if (data) {
-        this.router.navigate(["/home"]);
-      } else {
-        this.router.navigate(["/user"]);
+    this.userService.isStartupCompleted().then((data: any) => {
+      if (!data) {
+        console.log(data, '0-----------------------------')
+        this.router.navigate(['/onboarding'])
+      }
+      else {
+        this.userService.getAuthenticatedUser().then((data: any) => {
+          if (data) {
+            this.router.navigate(["/home"]);
+          } else {
+            this.router.navigate(["/user"]);
+          }
+        });
       }
     });
+    
   }
 }
