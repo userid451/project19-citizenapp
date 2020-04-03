@@ -1,9 +1,70 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header headerTitle="Sign In"></app-header>
 
-<ion-content>
+<ion-content no-bounce padding>
+
+  <ion-row class="app-icon-container">
+    <ion-col class="ion-text-center">
+      <ion-icon name="logo-ionic" class="app-icon-zoom"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <form [formGroup]="loginForm">
+    <div *ngIf="!loginForm.controls.login.valid"
+         class="validator-error">
+      Email or password is incorrect.
+    </div>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [formControl]="loginForm.controls['email']"
+                 type="email"></ion-input>
+    </ion-item>
+
+    <div *ngIf="!loginForm.controls.email.valid &&
+        loginForm.controls.email.dirty"
+         class="validator-error">
+      Please enter a valid email.
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [formControl]="loginForm.controls['password']"
+                 type="password"></ion-input>
+    </ion-item>
+
+    <div *ngIf="!loginForm.controls.password.valid &&
+        loginForm.controls.password.dirty"
+         class="validator-error">
+      Please enter a valid password.
+    </div>
+
+    <ion-row class="sign-in-button-container">
+      <ion-col class="ion-text-center">
+        <div class="ion-padding">
+          <ion-button
+                  expand="block" type="submit" class="ion-no-margin"
+                  style="--border-radius: 12px"
+                  [disabled]="!loginForm.valid" (click)="onSignIn()">SIGN IN</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button fill="clear"
+                (click)="onForgotPassword()">
+          Forgot your password?
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button fill="clear"
+          [routerLink]="['/register']">
+          Register
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
 
 </ion-content>

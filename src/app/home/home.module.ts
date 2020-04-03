@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LandingPageRoutingModule } from './landing-routing.module';
+import { HomePageRoutingModule } from './home-routing.module';
 
-import { LandingPage } from './landing.page';
-import {HeaderModule}  from '../component/header/header.module';
+import { HomePage }   from './home.page';
+import {HeaderModule} from '../component/header/header.module';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        LandingPageRoutingModule,
+        HomePageRoutingModule,
         HeaderModule
     ],
-  declarations: [LandingPage]
+  declarations: [HomePage]
 })
-export class LandingPageModule {}
+export class HomePageModule {}

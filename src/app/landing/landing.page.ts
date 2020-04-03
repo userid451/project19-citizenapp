@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService}         from '../api/user.service';
+import {Router}              from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPage implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
+    this.userService.getAuthenticatedUser().then((data: any) => {
+      if (data) {
+        this.router.navigate(['/home']);
+      }
+      else {
+        this.router.navigate(['/user'])
+      }
+    });
   }
-
 }
