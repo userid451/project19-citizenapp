@@ -4,23 +4,27 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-buttons slot="primary">
-      <ion-button color="light">
+    <ion-buttons slot="start">
+      <ion-button>
         <ion-text color="secondary">
-          {{user.name}}
+          {{ user.name }}
         </ion-text>
-
       </ion-button>
     </ion-buttons>
+
     <ion-buttons slot="primary">
-      <ion-button >
-        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      <ion-button>
+        <ion-icon
+          slot="icon-only"
+          ios="ellipsis-horizontal"
+          md="ellipsis-vertical"
+        ></ion-icon>
       </ion-button>
     </ion-buttons>
 
-
-
-    <ion-title color="light" class="ion-text-center">{{headerTitle}}</ion-title>
+    <ion-title color="light" class="ion-text-center">{{
+      headerTitle
+    }}</ion-title>
   </ion-toolbar>
-
 </ion-header>
+<!-- <app-menu></app-menu> -->

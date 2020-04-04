@@ -1,39 +1,49 @@
-<app-header headerTitle="Start up"></app-header>
 
 <ion-content fullscreen>
-<!--  <ion-card>-->
+  <!--  <ion-card>-->
 
-<!--    <ion-item>-->
-<!--      <ion-img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" ></ion-img>-->
-<!--&lt;!&ndash;      <ion-label>ion-item in a card, icon left, button right</ion-label>&ndash;&gt;-->
-<!--&lt;!&ndash;      <ion-button fill="outline" slot="end">View</ion-button>&ndash;&gt;-->
-<!--    </ion-item>-->
+  <!--    <ion-item>-->
+  <!--      <ion-img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" ></ion-img>-->
+  <!--&lt;!&ndash;      <ion-label>ion-item in a card, icon left, button right</ion-label>&ndash;&gt;-->
+  <!--&lt;!&ndash;      <ion-button fill="outline" slot="end">View</ion-button>&ndash;&gt;-->
+  <!--    </ion-item>-->
 
-<!--    <ion-card-content>-->
-<!--      This is content, without any paragraph or header tags,-->
-<!--      within an ion-card-content element.-->
-<!--    </ion-card-content>-->
-<!--  </ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      This is content, without any paragraph or header tags,-->
+  <!--      within an ion-card-content element.-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
   <ion-grid>
     <ion-row>
       <ion-col>
         <div>
           <ion-card>
-            <ngx-qrcode
-                    [qrc-element-type]="elementType"
-                    [qrc-value] = "qrValue"
-                    qrc-class = "aclass"
-                    qrc-errorCorrectionLevel = "L">
-            </ngx-qrcode>
-            <ion-card-header>
-              <ion-card-subtitle>Destination</ion-card-subtitle>
-              <ion-card-title>Madison, WI</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
-            </ion-card-content>
+            <span style="text-align: center;">
+              <ngx-qrcode
+                [qrc-element-type]="elementType"
+                [qrc-value]="qrValue"
+                qrc-class="aclass"
+                qrc-errorCorrectionLevel="L"
+              >
+              </ngx-qrcode>
+            </span>
           </ion-card>
         </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Moderate risk of infection</ion-card-subtitle>
+            <ion-card-title>Your status is Yellow</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            This is an estimation based on our algorithm that analyzed your
+            location and time you spent in infected zones.
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
