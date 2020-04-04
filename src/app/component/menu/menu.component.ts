@@ -10,7 +10,7 @@ export class MenuComponent implements OnInit {
   pages = [
     {
       title: "statistics",
-      url: "../statistics/",
+      url: "/register",
     },
     {
       title: "reports",

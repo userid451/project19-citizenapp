@@ -7,7 +7,7 @@ import { HeaderComponent } from "./header.component";
 import { MenuModule } from "../menu/menu.module";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, MenuModule],
+  imports: [CommonModule, FormsModule, IonicModule],
   declarations: [HeaderComponent],
   exports: [HeaderComponent],
 })

@@ -9,33 +9,13 @@ import { Router, RouterEvent } from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   @Input() headerTitle: string;
+  @Input() showUser: boolean;
   user: any = { name: "" };
-  pages = [
-    {
-      title: "statistics",
-      url: "../statistics/",
-    },
-    {
-      title: "reports",
-      url: "../report/",
-    },
-    {
-      title: "information",
-      url: "../faq/",
-    },
-    {
-      title: "self-screening",
-      url: "../self-screening/",
-    },
-  ];
-  selectedPath = "";
   constructor(private userService: UserService, private router: Router) {
-    this.router.events.subscribe((event: RouterEvent) => {
-      this.selectedPath = event.url;
-    });
   }
 
   ngOnInit(): void {
+    this.showUser = this.showUser
     this.userService.getAuthenticatedUser().then((user: string) => {
       if (user) {
         this.user = JSON.parse(user);
