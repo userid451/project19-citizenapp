@@ -9,7 +9,7 @@ import { HomePageRoutingModule } from "./home-routing.module";
 import { HomePage } from "./home.page";
 import { HeaderModule } from "../component/header/header.module";
 import { NgxQRCodeModule } from "ngx-qrcode2";
-import { Geolocation } from "@ionic-native/geolocation/ngx";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +18,6 @@ import { Geolocation } from "@ionic-native/geolocation/ngx";
     HomePageRoutingModule,
     HeaderModule,
     NgxQRCodeModule,
-    Geolocation,
   ],
   declarations: [HomePage],
 })

@@ -47,5 +47,21 @@
         </ion-card>
       </ion-col>
     </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Report</ion-card-subtitle>
+          </ion-card-header>
+          <ion-button (click)="getlocation()" shape="round"
+            >Round Button</ion-button
+          >
+          <p>Lat = {{lat}}</p>
+          <p>Lon = {{lon}}</p>
+          <p>Error = {{latlonerror}}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
