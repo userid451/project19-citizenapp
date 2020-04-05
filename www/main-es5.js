@@ -895,8 +895,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, UserService);
 
         this.storage = storage;
-        this.userPrefix = 'User';
-        this.userAuthPrefix = 'Auth'; // this.storage.clear();
+        this.userPrefix = "User";
+        this.userAuthPrefix = "Auth"; //this.storage.clear();
       }
 
       _createClass(UserService, [{
@@ -958,10 +958,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this3 = this;
 
           return new Promise(function (resolve) {
-            var name = 'anonymous';
-            var phoneNumber = '1234455';
-            var email = 'shadow@nomail.com';
-            var password = 'shadowPasword00987@4355';
+            var name = "anonymous";
+            var phoneNumber = "1234455";
+            var email = "shadow@nomail.com";
+            var password = "shadowPasword00987@4355";
             var id = uuid__WEBPACK_IMPORTED_MODULE_3__["v4"]();
 
             _this3.saveUser({
@@ -992,12 +992,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "startUpCompleted",
         value: function startUpCompleted() {
-          return this.storage.set('StartedUpCompleted', 'true');
+          return this.storage.set("StartedUpCompleted", "true");
         }
       }, {
         key: "isStartupCompleted",
         value: function isStartupCompleted() {
-          return this.storage.get('StartedUpCompleted');
+          return this.storage.get("StartedUpCompleted");
         }
       }]);
 
@@ -1011,7 +1011,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
+      providedIn: "root"
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"]])], UserService);
     /***/
   },
@@ -1373,6 +1373,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _component_menu_menu_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! ./component/menu/menu.module */
     "./src/app/component/menu/menu.module.ts");
+    /* harmony import */
+
+
+    var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! @ionic-native/geolocation/ngx */
+    "./node_modules/@ionic-native/geolocation/ngx/index.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -1385,7 +1391,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"]
-      }],
+      }, _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__["Geolocation"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
     })], AppModule);
     /***/

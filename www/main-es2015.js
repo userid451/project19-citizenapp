@@ -788,9 +788,9 @@ __webpack_require__.r(__webpack_exports__);
 let UserService = class UserService {
     constructor(storage) {
         this.storage = storage;
-        this.userPrefix = 'User';
-        this.userAuthPrefix = 'Auth';
-        // this.storage.clear();
+        this.userPrefix = "User";
+        this.userAuthPrefix = "Auth";
+        //this.storage.clear();
     }
     saveUser(user) {
         try {
@@ -803,12 +803,14 @@ let UserService = class UserService {
     getUserByEmail(email) {
         let user;
         return new Promise((resolve) => {
-            this.storage.forEach((value, key) => {
+            this.storage
+                .forEach((value, key) => {
                 const record = JSON.parse(value);
                 if (record.email === email) {
                     user = record;
                 }
-            }).then(() => {
+            })
+                .then(() => {
                 resolve(user);
                 // Todo reject with error
             });
@@ -835,10 +837,10 @@ let UserService = class UserService {
     }
     createShadowUser() {
         return new Promise((resolve) => {
-            const name = 'anonymous';
-            const phoneNumber = '1234455';
-            const email = 'shadow@nomail.com';
-            const password = 'shadowPasword00987@4355';
+            const name = "anonymous";
+            const phoneNumber = "1234455";
+            const email = "shadow@nomail.com";
+            const password = "shadowPasword00987@4355";
             const id = uuid__WEBPACK_IMPORTED_MODULE_3__["v4"]();
             this.saveUser({ name, phoneNumber, email, password, id }).then(() => {
                 resolve();
@@ -857,10 +859,10 @@ let UserService = class UserService {
         return this.storage.get(this.userAuthPrefix);
     }
     startUpCompleted() {
-        return this.storage.set('StartedUpCompleted', 'true');
+        return this.storage.set("StartedUpCompleted", "true");
     }
     isStartupCompleted() {
-        return this.storage.get('StartedUpCompleted');
+        return this.storage.get("StartedUpCompleted");
     }
 };
 UserService.ctorParameters = () => [
@@ -868,7 +870,7 @@ UserService.ctorParameters = () => [
 ];
 UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+        providedIn: "root",
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"]])
 ], UserService);
@@ -1030,6 +1032,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var ngx_qrcode2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-qrcode2 */ "./node_modules/ngx-qrcode2/index.js");
 /* harmony import */ var _component_menu_menu_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./component/menu/menu.module */ "./src/app/component/menu/menu.module.ts");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+
 
 
 
@@ -1067,6 +1071,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"] },
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__["Geolocation"],
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
     })
