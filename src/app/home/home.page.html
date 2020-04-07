@@ -1,20 +1,15 @@
 <app-header headerTitle="Home"></app-header>
 
 <ion-content fullscreen>
-  <!--  <ion-card>-->
-
-  <!--    <ion-item>-->
-  <!--      <ion-img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" ></ion-img>-->
-  <!--&lt;!&ndash;      <ion-label>ion-item in a card, icon left, button right</ion-label>&ndash;&gt;-->
-  <!--&lt;!&ndash;      <ion-button fill="outline" slot="end">View</ion-button>&ndash;&gt;-->
-  <!--    </ion-item>-->
-
-  <!--    <ion-card-content>-->
-  <!--      This is content, without any paragraph or header tags,-->
-  <!--      within an ion-card-content element.-->
-  <!--    </ion-card-content>-->
-  <!--  </ion-card>-->
   <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card><h4>Please login</h4></ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
     <ion-row>
       <ion-col>
         <div>
@@ -28,40 +23,36 @@
               >
               </ngx-qrcode>
             </span>
+            <div class="qrinformation">
+              <h2>Moderate risk of infection</h2>
+              <h3>Your status is Yellow</h3>
+              <p>
+                This is an estimation based on our algorithm that analyzed your
+                location and time you spent in infected zones.
+              </p>
+            </div>
           </ion-card>
         </div>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-subtitle>Moderate risk of infection</ion-card-subtitle>
-            <ion-card-title>Your status is Yellow</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            This is an estimation based on our algorithm that analyzed your
-            location and time you spent in infected zones.
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-subtitle>Report</ion-card-subtitle>
-          </ion-card-header>
-          <ion-button (click)="getlocation()" shape="round"
-            >Round Button</ion-button
-          >
-          <p>Lat = {{lat}}</p>
-          <p>Lon = {{lon}}</p>
-          <p>Error = {{latlonerror}}</p>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button (click)="getlocation()" data-desc="Report Location">
+          <ion-icon name="alert-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="hello()" data-desc="Register new case">
+          <ion-icon name="person-add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
   </ion-grid>
+  <div class="share_button">
+    <ion-button expand="block" fill="clear"
+      >Share this app to fight covid19 togther</ion-button
+    >
+  </div>
 </ion-content>

@@ -43,6 +43,17 @@ const routes: Routes = [
         (m) => m.StatisticsPageModule
       ),
   },
+  {
+    path: "faq",
+    loadChildren: () => import("./faq/faq.module").then((m) => m.FaqPageModule),
+  },
+  {
+    path: "self-screening",
+    loadChildren: () =>
+      import("./self-screening/self-screening.module").then(
+        (m) => m.SelfScreeningPageModule
+      ),
+  },
 ];
 @NgModule({
   imports: [

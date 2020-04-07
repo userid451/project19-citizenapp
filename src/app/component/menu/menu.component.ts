@@ -10,19 +10,15 @@ export class MenuComponent implements OnInit {
   pages = [
     {
       title: "statistics",
-      url: "/register",
-    },
-    {
-      title: "reports",
-      url: "../report/",
+      url: "/statistics",
     },
     {
       title: "information",
-      url: "../faq/",
+      url: "/faq",
     },
     {
       title: "self-screening",
-      url: "../self-screening/",
+      url: "/self-screening",
     },
   ];
   selectedPath = "";

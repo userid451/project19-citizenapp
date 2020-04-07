@@ -17,6 +17,9 @@ export class HomePage implements OnInit {
     private userService: UserService,
     private geolocation: Geolocation
   ) {}
+  hello() {
+    console.log("I am working");
+  }
   getlocation() {
     this.geolocation
       .getCurrentPosition()
